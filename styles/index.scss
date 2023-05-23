@@ -1,0 +1,65 @@
+body {
+    background: black;
+    padding: 20px;
+    overflow: scroll;
+}
+
+.main-section {
+    display: grid;
+    float: right;
+    justify-items: end;
+    width: 100%;
+}
+
+.main-section__card {
+    right: 0;
+    height: fit-content;
+    max-width: 500px;
+    width: fit-content;
+    background: greenyellow;
+    padding: 0 20px;
+    border-radius: 20px;
+    position: relative;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+
+.main-section__card-my {
+    left: 0;
+    height: fit-content;
+    max-width: 500px;
+    width: fit-content;
+    background: lightblue;
+    padding: 0 20px;
+    border-radius: 20px;
+    position: relative;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+@keyframes show-card {
+    0% {
+        right: -100%;
+        z-index: -1;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+
+.question {
+    position: absolute;
+    z-index: 999;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+
+    &:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+}
